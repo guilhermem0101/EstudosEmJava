@@ -5,9 +5,9 @@ package ClassesAbstratas;
 public class Conta {
 	
 	
-	int numero;
-	double saldo;
-	public Cliente titular;
+	private int numero;
+	private double saldo;
+	private Cliente titular;
 	
 	
 	

@@ -19,7 +19,7 @@ public class Banco {
 		//conta1.trasnfere(1000, conta2, conta3);
 		System.out.println(conta2.getSaldo()+ " "+ conta3.getSaldo() );
 		
-		System.out.println(conta1.titular.nome);
+		System.out.println(conta1.getTitular().getNome());
 	}
 
 }

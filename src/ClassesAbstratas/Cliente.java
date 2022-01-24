@@ -2,9 +2,9 @@ package ClassesAbstratas;
 
 public class Cliente {
 	
-	public String nome;
-	public String cpf;
-	public int idade;
+	private String nome;
+	private String cpf;
+	private int idade;
 	
 	
 	
