@@ -2,6 +2,7 @@ package ClassesDeExecução;
 
 import ClassesAbstratas.Cliente;
 import ClassesAbstratas.Conta;
+import ClassesAbstratas.ContaPoupanca;
 
 public class Banco {
 	
@@ -14,12 +15,15 @@ public class Banco {
 		Conta conta1 = new Conta(cliente1 ,1,4000.00);		
 		Conta conta2 = new Conta(cliente2,2,3000.00);
 		Conta conta3 = new Conta(cliente3,3,3000.00);
-		
+		ContaPoupanca conta4 = new ContaPoupanca(cliente3, 4, 2000.00, 1000.00);
 		
 		//conta1.trasnfere(1000, conta2, conta3);
-		System.out.println(conta2.getSaldo()+ " "+ conta3.getSaldo() );
+		conta4.transferePoupancaSaldo(2000.00);
 		
-		System.out.println(conta1.getTitular().getNome());
+		
+		System.out.println(conta4.getSaldo()+ " "+ conta4.getSaldoPoupanca());
+		
+		System.out.println(conta1.getTitular().getNome() + " " + Conta.getNumeroDeContas());
 	}
 
 }

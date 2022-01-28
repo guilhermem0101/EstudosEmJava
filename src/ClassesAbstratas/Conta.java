@@ -6,9 +6,9 @@ public class Conta {
 	
 	
 	private int numero;
-	private double saldo;
+	protected double saldo;
 	private Cliente titular;
-	
+	private static int numeroDeContas;
 	
 	
 	
@@ -17,11 +17,15 @@ public class Conta {
 		this.titular = titular;
 		this.numero = numero;
 		this.saldo = saldo;
+		Conta.numeroDeContas +=1;
 	}
 
+	
+	public static int getNumeroDeContas() {
+		return Conta.numeroDeContas;
+	}
 
-
-
+	 
 	public Cliente getTitular() {
 		return titular;
 	}
