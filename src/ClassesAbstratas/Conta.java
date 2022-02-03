@@ -6,22 +6,22 @@ public class Conta {
 	
 	
 	private int numero;
-	protected double saldo;
+	protected double saldo; // protected serve para que o atributo em questão só seja ultilizado pelas classes filhas (subclasses) e classes do mesmo packeg.
 	private Cliente titular;
-	private static int numeroDeContas;
+	private static int numeroDeContas; // static serve para que um atributo seja pertencente à classe e não à um objeto
 	
 	
 	
-	public Conta(Cliente titular, int numero, double saldo) {
+	public Conta(Cliente titular, int numero, double saldo) /* toda vez que um objeto é instanciado, ele roda o construtor */ { 
 		super();
 		this.titular = titular;
 		this.numero = numero;
 		this.saldo = saldo;
-		Conta.numeroDeContas +=1;
+		Conta.numeroDeContas +=1; // para invocar o atributo da classe, usa-se o nome da classe ao invez do this.
 	}
 
 	
-	public static int getNumeroDeContas() {
+	public static int getNumeroDeContas() /* Para metodos da classe, usase o static */{
 		return Conta.numeroDeContas;
 	}
 
