@@ -2,12 +2,12 @@ package ClassesAbstratas;
 
 
 
-public class Conta {
+public class Conta implements Pix{
 	
 	
 	private int numero;
 	protected double saldo; // protected serve para que o atributo em questão só seja ultilizado pelas classes filhas (subclasses) e classes do mesmo packeg.
-	private Cliente titular;
+	private Cliente titular; // atributo/objeto, um objeto pode ter como atributo outro objeto.
 	private static int numeroDeContas; // static serve para que um atributo seja pertencente à classe e não à um objeto
 	
 	
@@ -26,7 +26,7 @@ public class Conta {
 	}
 
 	 
-	public Cliente getTitular() {
+	public Cliente getTitular() /* metodo get para acessar o atributo/objeto*/{
 		return titular;
 	}
 
@@ -80,7 +80,7 @@ public class Conta {
 	}
 	
 	
-	public void trasnfere(double valor, Conta destino, Conta destino2) {
+	public void trasnfere(double valor, Conta destino) /* um pode acionar n objetos*/{
 
 		if (valor > saldo) {
 			System.out.println("valor não pode ser transferido pois é superior ao saldo");
@@ -89,10 +89,19 @@ public class Conta {
 			
 			this.saldo -= valor;
 			destino.credito(valor);
-			destino2.credito(valor);
+			//destino2.credito(valor);
 			
 		}
 		
+	}
+
+
+	@Override
+	public void transferePix(String chave, Conta destino, double valor) {
+		
+		if (chave == titular.getCpf()) {
+			destino.trasnfere(valor, destino);
+		}
 	}
 	
 	
