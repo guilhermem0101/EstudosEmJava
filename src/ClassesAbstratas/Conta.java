@@ -1,6 +1,6 @@
 package ClassesAbstratas;
 
-
+import java.util.ArrayList;
 
 public class Conta implements Pix{
 	
@@ -11,13 +11,18 @@ public class Conta implements Pix{
 	private static int numeroDeContas; // static serve para que um atributo seja pertencente à classe e não à um objeto
 	
 	
-	
+	/*public ArrayList<Conta> vetorDeContas(){
+		
+		return contas;
+	}*/
+	ArrayList<Conta> contas = new ArrayList<>();
 	public Conta(Cliente titular, int numero, double saldo) /* toda vez que um objeto é instanciado, ele roda o construtor */ { 
 		super();
 		this.titular = titular;
 		this.numero = numero;
 		this.saldo = saldo;
 		Conta.numeroDeContas +=1; // para invocar o atributo da classe, usa-se o nome da classe ao invez do this.
+		
 	}
 
 	
