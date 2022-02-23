@@ -24,15 +24,25 @@ public class Banco {
 		
 		contas.add(conta1);
 		contas.add(conta2);
-		
+		conta1.debito(5000);
 		//conta1.trasnfere(1000, conta2, conta3);
 		conta4.transferePoupancaSaldo(2000.00);
 		
 		
+		try	{
+			for	(int	i	=	0;	i	<=	15;	i++)	{
+				conta1.credito(i	+	1000);
+				System.out.println(conta1.getSaldo());
+				if	(i	==	5)	{
+					conta1 =	null;
+				}
+			}
+		}	catch	(NullPointerException	e)	{
+			System.out.println("erro:	"	+	e);
+		}
+		//System.out.println(conta4.getSaldo()+ " "+ conta4.getSaldoPoupanca());
 		
-		System.out.println(conta4.getSaldo()+ " "+ conta4.getSaldoPoupanca());
-		
-		System.out.println(conta1.getTitular().getNome() + " " + Conta.getNumeroDeContas());
+		//System.out.println(conta1.getTitular().getNome() + " " + Conta.getNumeroDeContas());
 	}
 
 }

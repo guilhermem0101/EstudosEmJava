@@ -70,7 +70,7 @@ public class Conta implements Pix{
 
 	public void debito (double valor) {
 		
-		if (valor > saldo) {
+		if (valor > this.saldo) {
 			System.out.println("valor não pode ser sacado pois é superior ao saldo");
 		}
 		else {
