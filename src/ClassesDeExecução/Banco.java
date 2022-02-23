@@ -9,6 +9,7 @@ import ClassesAbstratas.ContaPoupanca;
 public class Banco {
 	
 	public static void main (String[] args) {
+		metodo1();
 		ArrayList	contass	=	new	ArrayList();
 		ArrayList<Conta> contas = new ArrayList<>();
 		Cliente cliente1 = new Cliente("guilherme","65465", 24);
@@ -24,14 +25,14 @@ public class Banco {
 		
 		contas.add(conta1);
 		contas.add(conta2);
-		conta1.debito(5000);
+		//conta1.debito(5000);
 		//conta1.trasnfere(1000, conta2, conta3);
 		conta4.transferePoupancaSaldo(2000.00);
 		
 		
-		try	{
+		/*try	{
 			for	(int	i	=	0;	i	<=	15;	i++)	{
-				conta1.credito(i	+	1000);
+				conta1.credito(	1000);
 				System.out.println(conta1.getSaldo());
 				if	(i	==	5)	{
 					conta1 =	null;
@@ -39,10 +40,42 @@ public class Banco {
 			}
 		}	catch	(NullPointerException	e)	{
 			System.out.println("erro:	"	+	e);
-		}
+		}*/
 		//System.out.println(conta4.getSaldo()+ " "+ conta4.getSaldoPoupanca());
 		
 		//System.out.println(conta1.getTitular().getNome() + " " + Conta.getNumeroDeContas());
 	}
+	public static void metodo1() {
+		System.out.println("inicio do metodo1");
+		try	{
+		metodo2();
+		}catch	(NullPointerException	e)	{
+			System.out.println("erro:	"	+	e);
+		}
+		System.out.println("fim do metodo1");
+	}
+	
+	public static void metodo2() {
+		System.out.println("inicio	do	metodo2");
+		Cliente cliente1 = new Cliente("guilherme","65465", 24);
+		Conta conta1 = new Conta(cliente1 ,1,4000.00);
+		
+		
+		for	(int	i	=	0;	i	<=	15;	i++){
+						
+			conta1.credito(i	+	1000);
+			System.out.println(conta1.getSaldo());
+			if	(i	==	5){
+							conta1	=	null;
+			}
+		
+		}
+		
+		System.out.println("fim	do	metodo2");
+	}
+	
+	
+	
+	
 
 }
