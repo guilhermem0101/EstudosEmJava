@@ -1,18 +1,20 @@
 package ClassesDeExecução;
 
-import java.io.FileNotFoundException;
-import java.util.Random;
+import java.util.ArrayList;
 
-import ClassesAbstratas.Conta;
+
+import ClassesAbstratas.Neuronio;
 
 class Teste {
 	public	static	void	main(String[]	args) {
-		try {
-			new	java.io.FileInputStream("arquivo.txt");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		ArrayList<Neuronio> sistema = new ArrayList<>();
+		
+		for (int i = 0; i<10; i++ ) {
+			new Neuronio(i);
+			System.out.println();
 		}
-}
+
+	}
 
 }

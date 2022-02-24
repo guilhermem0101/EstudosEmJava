@@ -16,6 +16,7 @@ public class Conta implements Pix{
 		return contas;
 	}*/
 	ArrayList<Conta> contas = new ArrayList<>();
+	
 	public Conta(Cliente titular, int numero, double saldo) /* toda vez que um objeto é instanciado, ele roda o construtor */ { 
 		super();
 		this.titular = titular;

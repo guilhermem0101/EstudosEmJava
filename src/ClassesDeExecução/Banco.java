@@ -22,7 +22,6 @@ public class Banco {
 		ContaPoupanca conta4 = new ContaPoupanca(cliente3, 4, 2000.00, 1000.00);
 		
 		
-		
 		contas.add(conta1);
 		contas.add(conta2);
 		//conta1.debito(5000);
