@@ -1,10 +1,17 @@
 package ClassesAbstratas;
 
 public class Neuronio {
-	public int numero;
+	private int id;
 	
-	public Neuronio(int numero) {
+	public Neuronio(int id) {
 		super();
-		this.numero = numero;
+		this.id = id;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	
+	
 }

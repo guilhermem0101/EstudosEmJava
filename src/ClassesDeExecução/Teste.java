@@ -11,9 +11,16 @@ class Teste {
 		ArrayList<Neuronio> sistema = new ArrayList<>();
 		
 		for (int i = 0; i<10; i++ ) {
-			new Neuronio(i);
+			Neuronio n = new Neuronio(i);
 			System.out.println();
+			sistema.add(i, n);
 		}
+		
+		for(Neuronio item : sistema){
+            System.out.print(item.getId());
+            System.out.println();
+        }
+		
 
 	}
 
